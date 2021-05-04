@@ -1,0 +1,577 @@
+/*шрифты*/
+
+@font-face{
+    font-family: OpenSans-regular;
+    src: url(https://netology-code.github.io/html-2-diploma/sources/fonts/OpenSans-Regular.woff);
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  @font-face{
+    font-family: OpenSans-bold;
+    src: url(https://netology-code.github.io/html-2-diploma/sources/fonts/OpenSans-Bold.woff);
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+  /*никак не убирался паддинг в списке тегов*/
+  *{
+      margin: 0 0 0 0;
+      padding: 0 0 0 0; 
+  }
+  
+  
+  .header {
+    background-image: url("https://netology-code.github.io/html-2-diploma/sources/images/banner-bg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-color: #000000;
+    position: relative;
+    z-index: 9999;  
+    padding-top: 25px; 
+    color: #ffffff;  
+    margin-right: auto;
+    margin-left: auto;
+    }
+  
+  .header::after {
+    content:"";
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    background-color: #000000;
+    opacity: 0.6;
+    z-index: -1;
+    
+  }
+  
+  .menu {
+    display: flex;
+    justify-content: space-between;
+    
+   
+   
+    
+  }
+  
+  
+  .logo { 
+   margin-left: 245px;
+  }
+  
+  
+  
+  
+  .menu-list {
+   list-style: none;
+   display: flex; 
+   text-transform: uppercase;
+   font-size: 13px;
+   line-height: normal;
+   z-index: 99;
+   font-family: OpenSans-regular, Arial, sans-serif;
+    margin-right: 245px;  
+   } 
+  
+  
+  .menu-list-link{
+    color: #ffffff;
+    margin-left: 40px;
+    font-size: 13px;
+  }
+  
+  
+   
+  a {
+    text-decoration: none;
+     list-style: none;
+    color: black;
+   }
+  
+  
+  
+  .title { 
+    font-family: OpenSans-bold, Arial, sans-serif;
+    text-transform: uppercase;
+    font-size: 45px;
+    color: #ffffff;
+    text-align: center;
+    padding-top: 90px;
+    padding-bottom: 190px; 
+    padding-right: 480px ;
+    padding-left: 480px;
+    margin-top: 0px;
+    margin-bottom: 65px; 
+  } 
+  
+    
+  
+  .main{
+   
+   font-family: OpenSans-regular, Arial, sans-serif; 
+   
+    max-width: 1640px;
+    min-width: 950px;
+   margin-right: auto;
+   margin-left: auto;
+   display: flex;
+  
+  }
+  
+  .section{
+   
+   
+  }
+  
+  .story{  
+    display: flex;
+    align-content: flex-start;
+    align-items: flex-start;
+    margin-right: auto;
+   margin-left: 245px;
+  
+  }
+  
+  .story-photo{
+   
+    /*height: 300px;/*нужна ли высота или  max-? немного есть сомнения в правильности выполнения всего  задания,с точки зрения адаптивности к различным мониторам,хотя пользовался и 17" и 25",все читается и я посчитал ,что задание выполнено адекватно*/
+   
+   }
+  
+  .story-section{
+    margin-left: 25px;
+    width: 370px;
+    
+   }
+  
+  
+  .tegs{
+    display: flex;
+    list-style: none; 
+    font-size: 14px;
+    text-transform: uppercase;
+    font-family: OpenSans-bold, Arial, sans-serif; 
+    margin-bottom: 14px;
+  }
+  
+  .tegs > ul {  
+    display: flex;
+    list-style: none;   
+  }
+  
+  /*
+  .ul {
+    padding-inline-start: 0px;} как убрать отступ у ТЭГОВ? поставил на весь документ паддинг 0000
+  */
+  
+  
+  
+  .teg-item{ 
+    color: #b59f5b;
+    margin-right: 20px;
+    
+    }
+  
+  .story-name  {
+    text-decoration: none;
+    list-style: none;
+    color: black;
+    text-transform: uppercase;
+    font-family: OpenSans-bold, Arial, sans-serif;
+    font-size: 20px;
+    font-weight: 700; 
+    margin-bottom: 35px;
+    display: flex;
+    align-content: flex-start;
+    line-height: 32px;
+  }
+  
+  .story-meta{
+    
+  }
+  
+  .story-date{
+    color: #888888;
+    font-size: 12px;
+    
+    }
+  
+  
+  .author {
+    font-family: OpenSans-bold, Arial, sans-serif;
+    color: black;
+    font-size: 12px;
+    margin-left: 15px;
+  }
+  
+  
+  .story-content {
+    margin-top: 50px;
+    font-size: 15px;
+   line-height: normal;
+  }
+  
+  .story:nth-child(n+2){
+    margin-top: 60px;
+  }
+  
+  
+  
+  .aside{
+    width: 272px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 120px;
+     }
+  
+  .posts{
+    color: black;
+    text-decoration: none;
+    list-style: none;
+    
+  }
+  
+  
+  .posts-name {
+    position: relative;    
+    color: black;
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    font-family: OpenSans-bold, Arial, sans-serif;
+    text-transform: uppercase;
+    font-size: 14px;
+    color: black; 
+    margin-bottom: 40px;
+  }
+  
+  .posts-name:after {
+    content: "";
+    position: absolute;
+    width: 65px;
+    height: 3px;
+    background-color: #b59f5b;;
+    opacity: 0.4;
+    top: 38px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto ;   
+  }
+  
+  
+  
+  
+  .post{
+    display: flex;
+    margin-top: 23px;
+    margin-bottom: 20px;  
+  }
+  
+  
+  
+  .post-img{
+   
+   align-content: center;
+  }
+  
+  .post-content{
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;   
+    vertical-align: top;
+    color: black;
+  }
+  
+  
+  .post-date{
+    display: block;
+    color: #888888;
+    font-size: 12px; 
+    
+  }
+  
+  
+  .post-link{
+    
+    font-family: OpenSans-bold, Arial, sans-serif;
+    text-transform: uppercase;
+    font-size: 14px;
+    line-height: 1;
+    color: black; 
+    display: flex;  
+    margin-top: 5px;
+  
+  }
+  
+  
+  .searching{  
+   
+    
+    
+  }
+  
+  .search-form { 
+   display: flex;
+    align-items: flex-start;
+    align-content: flex-start;
+    justify-content: space-between;
+    font-family: OpenSans-Regular, Arial, sans-serif;
+    font-weight: 400;
+    font-size: 13px;
+    
+  }
+  
+  label.search {  
+    
+    width: 100%;
+  
+  }
+  
+  .visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    clip: rect(1px, 1px, 1px, 1px);
+  }
+  
+  .search-input{
+    
+    box-sizing: border-box;
+    height: 50px;
+    width: 100%;
+    padding-left: 20px;
+    background-color: #f4f7f6;
+    border: none;
+    color: #a2a4a3;
+    font-family: OpenSans-regular, Arial, sans-serif;
+    font-weight: 400;
+    font-size: 13px;
+    -moz-appearance: none;
+    -webkit-appearance: none; 
+   
+  }
+  
+  .button-find {
+    box-sizing: border-box;
+    min-width: 50px;
+    height: 50px;
+    background-color: #b59f5b;
+    cursor: pointer;
+    
+    }
+  
+  
+  
+  .searching { 
+    display: block;  
+    height: 50px; 
+    font-size: 13px;    
+    background-color: #f4f7f6;
+    border: none;
+    padding: 0px 0px 0px 0px;
+    
+    
+  }
+  
+  
+  
+  .button-find {
+    display: block;  
+    background-color: #b59f5b;
+   background-image: url("https://netology-code.github.io/html-2-diploma/sources/images/search.svg");
+    background-repeat: no-repeat;
+    background-size: 20px ;
+    background-position: center center; 
+    border: none;  
+    cursor: pointer;
+    }
+  
+  .mailing {
+    margin-top: 60px;
+  }
+  
+  
+  .subscription{
+   margin-top: 25px; 
+  }
+  
+  .subscription-group{
+    width: 100%;
+    }
+  
+  .email-input{
+    box-sizing: border-box;
+    height: 50px;
+    width: 100%;
+    padding-left:  20px ;
+    background-color: #f4f7f6;
+    border: none;
+    color: #a2a4a3;
+    font-family: OpenSans-regular, Arial, sans-serif;
+    font-weight: 400;
+    font-size: 13px;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+  }
+  
+  
+  .button-email {
+    box-sizing: border-box;
+    width: 100%;
+    height: 50px;
+    margin-top: 17px;
+    background-color: #b59f5b;
+    cursor: pointer;
+    border: none; 
+    color: #ffffff;
+    font-family: OpenSans-Bold, Arial, sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    text-transform: uppercase;
+  }
+  
+  .tag{
+    margin-top:60px;
+    
+  }
+  
+  .tag-container{
+   
+    
+    
+  }
+  
+  .aside-tag {
+    list-style: none;
+    display: inline-block;  
+    vertical-align: top; 
+    
+  }
+  
+    
+  .tag-text {
+    display: inline-block;
+    box-sizing: border-box;
+    padding: 6px 12px;
+    border: 3px solid #eeeeee;
+    color: #0f0d0e;
+    margin: 0 5px 6px 0;
+    font-family: OpenSans-bold, Arial, sans-serif;
+    font-weight: 700;
+    font-size: 12px;
+    text-transform: uppercase;
+    text-decoration: none;
+    text-align: center;
+  
+  }
+  
+  .theme{
+    margin-top: 60px;
+      
+  }
+  
+  .theme-container{
+    list-style: none;
+    text-decoration: none;
+      
+   
+  }
+  
+  .theme-container li{   
+    padding-bottom: 13px;
+    margin-top: 17px;
+    border-bottom: 1px solid #eeeeee;
+  }
+  
+  .theme-link{
+    font-family: OpenSans-bold, Arial, sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    text-decoration: none;
+    text-align: center;
+    color: black;
+  
+  }
+  
+  .sup{
+    vertical-align: super;
+    font-size: 11px;
+    color:#b59f5b; /*вроде в курсе не было sup* ,но как еще реализовать не понятно*/
+  }
+  
+  
+  .social{
+     
+    max-width: 1170px;  
+    height: 85px ;
+    margin-top: 60px;
+    background-color: #f4f7f6;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  
+  .address{
+    
+  }
+  
+  .social-address{
+   display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center; 
+    padding-top: 30px ;
+    padding-bottom: 30px;
+  }
+  
+  .address-link{
+    
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-repeat: no-repeat;
+    background-positon: center;
+    background-size: cover;
+    list-style: none;
+    margin-right: 26px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+  
+  }
+  .twitter {
+    background-image: url(https://netology-code.github.io/html-2-diploma/sources/images/social/004-twitter.svg);
+   width: 23px;
+   height: 23px;
+  }
+  
+  .pinterest {
+    background-image: url(https://netology-code.github.io/html-2-diploma/sources/images/social/001-pinterest.svg);
+    }
+  
+  .facebook {
+    background-image: url(https://netology-code.github.io/html-2-diploma/sources/images/social/002-facebook-logo.svg);
+  }
+  
+  .instagram {
+    background-image: url(https://netology-code.github.io/html-2-diploma/sources/images/social/005-instagram.svg);
+  }
+  
+  .tumblr {
+    background-image: url(https://netology-code.github.io/html-2-diploma/sources/images/social/003-tumblr.svg);
+  }
+  
+  .copyright{
+    display: block;
+    color: #999999;
+    font-family: OpenSans-bold, Arial, sans-serif;
+    font-weight: 700;
+    font-size: 12px;
+    text-decoration: none;
+    text-align: center;  
+    margin-top: 25px;
+    margin-bottom: 45px;
+  }
